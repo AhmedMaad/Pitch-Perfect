@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,6 @@
                                 <state key="normal" backgroundImage="Stop"/>
                                 <connections>
                                     <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUu-no-9zd"/>
-                                    <segue destination="kry-Uy-ck1" kind="show" id="CDH-Uf-hLs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tht-lQ-HDO">
@@ -59,16 +58,17 @@
                         <outlet property="recordButton" destination="l27-cf-zxB" id="Ky3-9Z-ioT"/>
                         <outlet property="recordLabel" destination="Tht-lQ-HDO" id="sGq-UP-bs0"/>
                         <outlet property="stopRecordingButton" destination="5Cl-n8-TLQ" id="IVt-PE-OTB"/>
+                        <segue destination="kry-Uy-ck1" kind="show" identifier="stopRecording" id="TKg-v5-SLl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1017.3913043478261" y="37.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="iWP-LT-5Kn">
             <objects>
-                <viewController id="kry-Uy-ck1" sceneMemberID="viewController">
+                <viewController id="kry-Uy-ck1" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="loI-C1-CRf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
